@@ -1,5 +1,5 @@
 
-//% color="#FFAB19" //% icon="\f29a"
+//% color="#FFAB19" //% icon="\uf29a"
 namespace r4E {
     /**
      * robot drives in given direction
