@@ -1,5 +1,5 @@
 {
-    "name": "R4E makecode",
+    "name": "pxt-r4e",
     "description": "",
     "dependencies": {
         "core": "*",
