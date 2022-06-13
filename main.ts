@@ -1,7 +1,6 @@
 
 //% color="#FFAB19" //% icon="\f29a"
 namespace r4E {
-
     /**
      * robot drives in given direction
      * @param direction choose between forward, backward, left and driveRight
@@ -10,7 +9,7 @@ namespace r4E {
      */
     //% block="robot drive $direction for $seconds seconds with speed $speed"
     //% seconds.min=0 seconds.max=9
-    //% speed.defl=r4e.getSpeed()
+    //% speed.defl=10
     //% speed.min=0 speed.max=16
     export function run(speed: number, direction: Richtung, seconds: number) {
         r4e.setSpeed(speed)
