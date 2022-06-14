@@ -12,7 +12,8 @@
         "main.ts",
         "README.md",
         "main.py",
-        "r4e.ts"
+        "r4e.ts",
+        "r4eMelodies.ts"
     ],
     "testFiles": [
         "test.ts"

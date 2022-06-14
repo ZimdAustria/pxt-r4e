@@ -1,4 +1,3 @@
-// Gib deinen Code hier ein
 
 enum Richtung {
     forward,
@@ -6,6 +5,7 @@ enum Richtung {
     left,
     right
 }
+
 
 namespace r4e{
     let speedSetting = 10;
@@ -48,6 +48,12 @@ namespace r4e{
         MotorDriver.MotorStop(Motor.A)
         MotorDriver.MotorStop(Motor.B)
     }
+
+    export function playMelody(melody:r4eMelodies) {
+        let song = r4eMelody.getMelody(melody);
+        music.startMelody(song);
+    }
+
 }
 
 
