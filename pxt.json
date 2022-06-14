@@ -4,8 +4,7 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*",
-        "pxt-Motor": "github:waveshare/pxt-Motor#7a0795114409e1c3246cec2e7ea2a20aeabb3c41"
+        "microphone": "*"
     },
     "files": [
         "main.blocks",
