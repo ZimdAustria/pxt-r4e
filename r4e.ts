@@ -4,7 +4,7 @@
  * 
  */
 //% color="#FFAB19" //% icon="\uf29a"
-//% groups="['Movement']"
+//% groups="['Movement','Melody']"
 namespace r4E {
     /**
      * robot drives in given direction
@@ -58,6 +58,7 @@ namespace r4E {
      * @param melody choose the melody you want the robot to play
      */
     //% block="play song $melody"
+    //% group="Melody"
     export function playMelody(melody: Melodien) {
         let song = r4eMelody.getMelody(melody);
         music.startMelody(song);
