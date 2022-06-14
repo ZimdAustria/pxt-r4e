@@ -3,7 +3,7 @@
  * in progress
  * 
  */
-
+//% color="#FFAB19" //% icon="\uf29a"
 namespace r4E {
     /**
      * robot drives in given direction
