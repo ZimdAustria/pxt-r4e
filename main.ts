@@ -7,6 +7,7 @@ namespace r4E {
      * @param seconds tell the robot how long it should drive in seconds
      * @param speed the speed of the robot from [0-16], optional argument
      */
+
     //% block="drive $direction for $seconds seconds with speed $speed"
     //% seconds.min=0 seconds.max=9
     //% speed.defl=10
@@ -22,10 +23,10 @@ namespace r4E {
         } else if (direction == Richtung.right) {
             r4e.driveRight(seconds,speed)
         }
-    }//%
+    }
 
     //% block= "play $melody"
     export function playMusic(melody:r4eMelodies) {
         r4e.playMelody(melody);
-    }//%
+    }
 }
