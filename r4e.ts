@@ -34,7 +34,7 @@ namespace r4E {
      * @param direction turning direction of motor
      * @param speed motor speed from 0-16
      */
-    //% block= "move $motor motor $direction with speed $speed"
+    //% block="move $motor motor $direction with speed $speed"
     //% speed.min= 0 speed.max=16
     export function moveM(motor: Motor, direction: Dir, speed: number) {
         r4eMotor.motorRun(motor,direction,speed);
@@ -44,7 +44,7 @@ namespace r4E {
      * stops motor
      * @param motor choose left or right motor
      */
-    //% block= "stop motor $motor"
+    //% block="stop motor $motor"
     export function stopM(motor: Motor) {
         r4eMotor.motorStop(motor);
     }
