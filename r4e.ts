@@ -4,6 +4,7 @@
  * 
  */
 //% color="#FFAB19" //% icon="\uf29a"
+//% groups="['Movement']"
 namespace r4E {
     /**
      * robot drives in given direction
@@ -12,10 +13,11 @@ namespace r4E {
      * @param speed the speed of the robot from [0-16], optional argument
      */
     //% block="drive $direction for $seconds seconds with speed $speed"
+    //% group="Movement"
     //% seconds.min=0 seconds.max=9
     //% speed.defl=10
     //% speed.min=0 speed.max=16
-    export function run(speed: number, direction: Richtung, seconds: number) {
+    export function move(speed: number, direction: Richtung, seconds: number) {
         r4eMotor.setSpeed(speed)
         if (direction == Richtung.forward) {
             r4eMotor.driveForward(seconds, speed)
@@ -35,8 +37,9 @@ namespace r4E {
      * @param speed motor speed from 0-16
      */
     //% block="move $motor motor $direction with speed $speed"
+    //% group="Movement"
     //% speed.min= 0 speed.max=16
-    export function moveM(motor: Motor, direction: Dir, speed: number) {
+    export function turnMotor(motor: Motor, direction: Dir, speed: number) {
         r4eMotor.motorRun(motor,direction,speed);
     }
 
@@ -45,7 +48,8 @@ namespace r4E {
      * @param motor choose left or right motor
      */
     //% block="stop motor $motor"
-    export function stopM(motor: Motor) {
+    //% group="Movement"
+    export function stopMotor(motor: Motor) {
         r4eMotor.motorStop(motor);
     }
 
@@ -54,7 +58,7 @@ namespace r4E {
      * @param melody choose the melody you want the robot to play
      */
     //% block="play song $melody"
-    export function playM(melody: Melodien) {
+    export function playMelody(melody: Melodien) {
         let song = r4eMelody.getMelody(melody);
         music.startMelody(song);
     }
