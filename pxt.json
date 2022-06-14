@@ -11,9 +11,10 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "main.py",
         "r4e.ts",
-        "r4eMelodies.ts"
+        "r4eMelodies.ts",
+        "_locales/de/README.md",
+        "re4Motor.ts"
     ],
     "testFiles": [
         "test.ts"

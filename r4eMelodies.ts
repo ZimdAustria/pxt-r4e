@@ -1,4 +1,4 @@
-enum r4eMelodies {
+enum Melodien {
     HarryPotter,
     HappyBirthday,
     SuperMario,
@@ -18,18 +18,18 @@ namespace r4eMelody {
     const starWars = ["e4:1"];
 
     
-    export function getMelody(melody:r4eMelodies) {
+    export function getMelody(melody:Melodien) {
         switch(melody) {
-            case r4eMelodies.HarryPotter:
+            case Melodien.HarryPotter:
                 return harryPotter;
                 break;
-            case r4eMelodies.HappyBirthday:
+            case Melodien.HappyBirthday:
                 return happyBirthday;
                 break;
-            case r4eMelodies.SuperMario:
+            case Melodien.SuperMario:
                 return superMario;
                 break;
-            case r4eMelodies.StarWars:
+            case Melodien.StarWars:
                 return starWars;
                 break;
             default:

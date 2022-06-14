@@ -1,59 +1,41 @@
+/**
+ * Robo4earth makecode extension
+ * in progress
+ * 
+ */
 
-enum Richtung {
-    forward,
-    backward,
-    left,
-    right
-}
-
-
-namespace r4e{
-    let speedSetting = 10;
-
-    export function setSpeed(newSpeed:number) {
-        speedSetting = newSpeed;
-    }
-    export function getSpeed() {
-        return speedSetting;
-    }
-
-    export function driveForward(seconds:number,speed:number) {
-        MotorDriver.MotorRun(Motor.A, Dir.backward, speed)
-        MotorDriver.MotorRun(Motor.B, Dir.backward, speed)
-        basic.pause(seconds * 1000)
-        MotorDriver.MotorStop(Motor.A)
-        MotorDriver.MotorStop(Motor.B)
-    }
-
-    export function driveBackward(seconds:number,speed:number) {
-        MotorDriver.MotorRun(Motor.A, Dir.forward, speed)
-        MotorDriver.MotorRun(Motor.B, Dir.forward, speed)
-        basic.pause(seconds * 1000)
-        MotorDriver.MotorStop(Motor.A)
-        MotorDriver.MotorStop(Motor.B)
+namespace r4E {
+    /**
+     * robot drives in given direction
+     * @param direction choose between forward, backward, left and driveRight
+     * @param seconds tell the robot how long it should drive in seconds
+     * @param speed the speed of the robot from [0-16], optional argument
+     */
+    //% block="drive $direction for $seconds seconds with speed $speed"
+    //% seconds.min=0 seconds.max=9
+    //% speed.defl=10
+    //% speed.min=0 speed.max=16
+    export function run(speed: number, direction: Richtung, seconds: number) {
+        r4eMotor.setSpeed(speed)
+        if (direction == Richtung.forward) {
+            r4eMotor.driveForward(seconds, speed)
+        } else if (direction == Richtung.backward) {
+            r4eMotor.driveBackward(seconds, speed)
+        } else if (direction == Richtung.left) {
+            r4eMotor.driveLeft(seconds, speed)
+        } else if (direction == Richtung.right) {
+            r4eMotor.driveRight(seconds, speed)
+        }
     }
 
-    export function driveLeft(seconds:number,speed:number) {
-        MotorDriver.MotorRun(Motor.A, Dir.backward, speed)
-        MotorDriver.MotorRun(Motor.A, Dir.forward, speed)
-        basic.pause(seconds * 1000)
-        MotorDriver.MotorStop(Motor.A)
-        MotorDriver.MotorStop(Motor.B)
-    }
-
-    export function driveRight(seconds:number,speed:number) {
-        MotorDriver.MotorRun(Motor.A, Dir.forward, speed)
-        MotorDriver.MotorRun(Motor.A, Dir.backward, speed)
-        basic.pause(seconds * 1000)
-        MotorDriver.MotorStop(Motor.A)
-        MotorDriver.MotorStop(Motor.B)
-    }
-
-    export function playMelody(melody:r4eMelodies) {
+    /**
+     * robot plays melody
+     * @param melody choose the melody you want the robot to play
+     */
+    //% block="play song $melody"
+    export function playM(melody: Melodien) {
         let song = r4eMelody.getMelody(melody);
         music.startMelody(song);
     }
 
 }
-
-
