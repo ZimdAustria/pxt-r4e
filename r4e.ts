@@ -29,6 +29,23 @@ namespace r4E {
     }
 
     /**
+     * Move single motor forward or backward with given speed
+     * @param $motor motor you want to move
+     * @param $direction turning direction of motor
+     * @param $speed motor speed from 0-16
+     */
+    //% block= move $motor motor $direction with $speed
+    //% speed.min= 0 speed.max=16
+    export function moveM(motor: Motor, direction: Dir, speed: number) {
+        r4eMotor.motorRun(motor,direction,speed);
+    }
+
+    //% block= stop motor $motor
+    export function stopM(motor:Motor) {
+        r4eMotor.motorStop(motor);
+    }
+
+    /**
      * robot plays melody
      * @param melody choose the melody you want the robot to play
      */

@@ -6,8 +6,8 @@ enum Richtung {
     right
 }
 enum Motor {
-    A = 0x1,
-    B = 0x2,
+    Right = 0x1,
+    Left = 0x2,
 }
 
 enum Dir {
@@ -23,38 +23,38 @@ let BIN1 = DigitalPin.P14;
 let BIN2 = DigitalPin.P15;
 let speedSetting = 10;
 
-function motorStop(m: Motor): void {
-    if (m == Motor.A)
-        pins.analogWritePin(PWMA, 0)
-    else
-        pins.analogWritePin(PWMB, 0)
-}
+namespace r4eMotor {
 
-function motorRun(m: Motor, index: Dir, speed: number): void {
-    speed = speed * 64 - 1; // map 0 to 1023
+    export function motorStop(m: Motor): void {
+        if (m == Motor.Right)
+            pins.analogWritePin(PWMA, 0)
+        else
+            pins.analogWritePin(PWMB, 0)
+    }
 
-    if (m == Motor.A) {
-        pins.analogWritePin(PWMA, speed)
-        if (index == Dir.Forward) {
-            pins.digitalWritePin(AIN1, 1)
-            pins.digitalWritePin(AIN2, 0)
+    export function motorRun(m: Motor, index: Dir, speed: number): void {
+        speed = speed * 64 - 1; // map 0 to 1023
+
+        if (m == Motor.Right) {
+            pins.analogWritePin(PWMA, speed)
+            if (index == Dir.Forward) {
+                pins.digitalWritePin(AIN1, 1)
+                pins.digitalWritePin(AIN2, 0)
+            } else {
+                pins.digitalWritePin(AIN1, 0)
+                pins.digitalWritePin(AIN2, 1)
+            }
         } else {
-            pins.digitalWritePin(AIN1, 0)
-            pins.digitalWritePin(AIN2, 1)
-        }
-    } else {
-        pins.analogWritePin(PWMB, speed)
-        if (index == Dir.Forward) {
-            pins.digitalWritePin(BIN1, 1)
-            pins.digitalWritePin(BIN2, 0)
-        } else {
-            pins.digitalWritePin(BIN1, 0)
-            pins.digitalWritePin(BIN2, 1)
+            pins.analogWritePin(PWMB, speed)
+            if (index == Dir.Forward) {
+                pins.digitalWritePin(BIN1, 1)
+                pins.digitalWritePin(BIN2, 0)
+            } else {
+                pins.digitalWritePin(BIN1, 0)
+                pins.digitalWritePin(BIN2, 1)
+            }
         }
     }
-}
-
-namespace r4eMotor {
 
     export function setSpeed(newSpeed: number) {
         speedSetting = newSpeed;
@@ -64,35 +64,35 @@ namespace r4eMotor {
     }
 
     export function driveForward(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Forward, speed)
-        motorRun(Motor.B, Dir.Forward, speed)
+        motorRun(Motor.Right, Dir.Forward, speed)
+        motorRun(Motor.Left, Dir.Forward, speed)
         basic.pause(seconds * 1000)
-        motorStop(Motor.A)
-        motorStop(Motor.B)
+        motorStop(Motor.Right)
+        motorStop(Motor.Left)
     }
 
     export function driveBackward(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Backward, speed)
-        motorRun(Motor.B, Dir.Backward, speed)
+        motorRun(Motor.Right, Dir.Backward, speed)
+        motorRun(Motor.Left, Dir.Backward, speed)
         basic.pause(seconds * 1000)
-        motorStop(Motor.A)
-        motorStop(Motor.B)
+        motorStop(Motor.Right)
+        motorStop(Motor.Left)
     }
 
     export function driveLeft(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Forward, speed)
-        motorRun(Motor.B, Dir.Backward, speed)
+        motorRun(Motor.Right, Dir.Forward, speed)
+        motorRun(Motor.Left, Dir.Backward, speed)
         basic.pause(seconds * 1000)
-        motorStop(Motor.A)
-        motorStop(Motor.B)
+        motorStop(Motor.Right)
+        motorStop(Motor.Left)
     }
 
     export function driveRight(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Backward, speed)
-        motorRun(Motor.B, Dir.Forward, speed)
+        motorRun(Motor.Right, Dir.Backward, speed)
+        motorRun(Motor.Left, Dir.Forward, speed)
         basic.pause(seconds * 1000)
-        motorStop(Motor.A)
-        motorStop(Motor.B)
+        motorStop(Motor.Right)
+        motorStop(Motor.Left)
     }
 
 }
