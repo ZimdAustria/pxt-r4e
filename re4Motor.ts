@@ -45,11 +45,11 @@ function motorRun(m: Motor, index: Dir, speed: number): void {
     } else {
         pins.analogWritePin(PWMB, speed)
         if (index == Dir.Forward) {
-            pins.digitalWritePin(BIN1, 0)
-            pins.digitalWritePin(BIN2, 1)
-        } else {
             pins.digitalWritePin(BIN1, 1)
             pins.digitalWritePin(BIN2, 0)
+        } else {
+            pins.digitalWritePin(BIN1, 0)
+            pins.digitalWritePin(BIN2, 1)
         }
     }
 }
@@ -64,14 +64,6 @@ namespace r4eMotor {
     }
 
     export function driveForward(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Backward, speed)
-        motorRun(Motor.B, Dir.Backward, speed)
-        basic.pause(seconds * 1000)
-        motorStop(Motor.A)
-        motorStop(Motor.B)
-    }
-
-    export function driveBackward(seconds: number, speed: number) {
         motorRun(Motor.A, Dir.Forward, speed)
         motorRun(Motor.B, Dir.Forward, speed)
         basic.pause(seconds * 1000)
@@ -79,17 +71,25 @@ namespace r4eMotor {
         motorStop(Motor.B)
     }
 
-    export function driveLeft(seconds: number, speed: number) {
+    export function driveBackward(seconds: number, speed: number) {
         motorRun(Motor.A, Dir.Backward, speed)
+        motorRun(Motor.B, Dir.Backward, speed)
+        basic.pause(seconds * 1000)
+        motorStop(Motor.A)
+        motorStop(Motor.B)
+    }
+
+    export function driveLeft(seconds: number, speed: number) {
         motorRun(Motor.A, Dir.Forward, speed)
+        motorRun(Motor.B, Dir.Backward, speed)
         basic.pause(seconds * 1000)
         motorStop(Motor.A)
         motorStop(Motor.B)
     }
 
     export function driveRight(seconds: number, speed: number) {
-        motorRun(Motor.A, Dir.Forward, speed)
         motorRun(Motor.A, Dir.Backward, speed)
+        motorRun(Motor.B, Dir.Forward, speed)
         basic.pause(seconds * 1000)
         motorStop(Motor.A)
         motorStop(Motor.B)
