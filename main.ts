@@ -27,5 +27,5 @@ namespace r4E {
     //% block= "play $melody"
     export function playMusic(melody:r4eMelodies) {
         r4e.playMelody(melody);
-    }
+    }//%
 }
