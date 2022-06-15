@@ -1,0 +1,15 @@
+{
+  "r4E": "Robo4earth makecode Erweiterung\r\nin Arbeit",
+  "r4E.move": "Die R4E fährt in die angegebene Richtung",
+  "r4E.move|param|direction": "wähle zwischen vorwärts, rückwärts, links und rechts",
+  "r4E.move|param|seconds": "Die Sekundenanzahl, die die R4E fahren soll",
+  "r4E.move|param|speed": "optional: die Geschwindigkeit der R4E im Bereich 0 bis 16",
+  "r4E.playMelody": "Die R4E spielt die ausgewählte Melodie ab",
+  "r4E.playMelody|param|melody": "wähle eine Melodie, die die R4E spielen soll",
+  "r4E.stopMotor": "stoppe Motor",
+  "r4E.stopMotor|param|motor": "wähle den linken (Left) oder rechten (Right) Motor der R4E",
+  "r4E.turnMotor": "bewege einen einzelnen Motor vor (forward) oder zurück (backward) mit der angegebenen Geschwindigkeit zwischen 0-16",
+  "r4E.turnMotor|param|direction": "die Drehrichtung des Motors",
+  "r4E.turnMotor|param|motor": "Motor, den du bewegen willst",
+  "r4E.turnMotor|param|speed": "Motor Geschwindigkeit von 0 bis 16"
+}

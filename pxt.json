@@ -12,8 +12,10 @@
         "README.md",
         "r4e.ts",
         "r4eMelodies.ts",
+        "re4Motor.ts",
         "_locales/de/README.md",
-        "re4Motor.ts"
+        "_locales/de/pxt-r4e-jsdoc-strings.json",
+        "_locales/de/pxt-r4e-strings.json"
     ],
     "testFiles": [
         "test.ts"

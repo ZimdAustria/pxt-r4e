@@ -1,0 +1,12 @@
+{
+  "r4E.move|block": "fahre in Richtung $direction für $seconds Sekunden mit Tempo $speed",
+  "r4E.playMelody|block": "spiele Melodie $melody",
+  "r4E.stopMotor|block": "stoppe Motor $motor",
+  "r4E.turnMotor|block": "bewege $motor Motor in Richtung $direction mit Tempo $speed",
+  "r4E|block": "r4E",
+  "{id:category}R4E": "R4E",
+  "{id:category}R4eMelody": "R4eMelody",
+  "{id:category}R4eMotor": "R4eMotor",
+  "{id:group}Melody": "Melodie",
+  "{id:group}Movement": "Bewegung"
+}
