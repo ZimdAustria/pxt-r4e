@@ -1,6 +1,6 @@
 {
     "name": "pxt-r4e",
-    "description": "",
+    "description": "Move the Robo4Earth robots and let them play melodies",
     "dependencies": {
         "core": "*",
         "radio": "*",
