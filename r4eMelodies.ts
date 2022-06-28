@@ -1,4 +1,4 @@
-enum Melodien {
+enum R4eMelodies {
     Fanfare,
     DontWorryBeHappy,
     Donauwalzer,
@@ -53,35 +53,26 @@ const rainbow = [
 
 namespace r4eMelody {
     
-    export function getMelody(melody:Melodien) {
+    export function melody(melody:R4eMelodies) {
         switch(melody) {
-            case Melodien.Fanfare:
+            case R4eMelodies.Fanfare:
                 return fanfare;
-                break;
-            case Melodien.DontWorryBeHappy:
+            case R4eMelodies.DontWorryBeHappy:
                 return beHappy;
-                break;
-            case Melodien.Donauwalzer:
+            case R4eMelodies.Donauwalzer:
                 return donauwalzer;
-                break;
-            case Melodien.HarryPotter:
+            case R4eMelodies.HarryPotter:
                 return harryPotter;
-                break;
-            case Melodien.HappyBirthday:
+            case R4eMelodies.HappyBirthday:
                 return happyBirthday;
-                break;
-            case Melodien.SuperMario:
+            case R4eMelodies.SuperMario:
                 return superMario;
-                break;
-            case Melodien.StarWars:
+            case R4eMelodies.StarWars:
                 return starWars;
-                break;
-            case Melodien.OverTheRainbow:
+            case R4eMelodies.OverTheRainbow:
                 return rainbow;
-                break;
             default:
                 return ["c:1"];
-                break;
         }
     }
 }

@@ -17,15 +17,15 @@ namespace r4E {
     //% seconds.min=0 seconds.max=9
     //% speed.defl=10
     //% speed.min=0 speed.max=16
-    export function move(speed: number, direction: Richtung, seconds: number) {
+    export function move(speed: number, direction: R4eMotorDirection, seconds: number) {
         r4eMotor.setSpeed(speed)
-        if (direction == Richtung.forward) {
+        if (direction == R4eMotorDirection.forward) {
             r4eMotor.driveForward(seconds, speed)
-        } else if (direction == Richtung.backward) {
+        } else if (direction == R4eMotorDirection.backward) {
             r4eMotor.driveBackward(seconds, speed)
-        } else if (direction == Richtung.left) {
+        } else if (direction == R4eMotorDirection.left) {
             r4eMotor.driveLeft(seconds, speed)
-        } else if (direction == Richtung.right) {
+        } else if (direction == R4eMotorDirection.right) {
             r4eMotor.driveRight(seconds, speed)
         }
     }
@@ -39,7 +39,7 @@ namespace r4E {
     //% block="move $motor motor $direction with speed $speed"
     //% group="Movement"
     //% speed.min= 0 speed.max=16
-    export function turnMotor(motor: Motor, direction: Dir, speed: number) {
+    export function turnMotor(motor: Motor, direction: Turn, speed: number) {
         r4eMotor.motorRun(motor,direction,speed);
     }
 
@@ -59,8 +59,8 @@ namespace r4E {
      */
     //% block="play song $melody"
     //% group="Melody"
-    export function playMelody(melody: Melodien) {
-        let song = r4eMelody.getMelody(melody);
+    export function playMelody(melody: r4eMelodies) {
+        let song = r4eMelody.melody(melody);
         music.startMelody(song);
     }
 
