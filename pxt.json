@@ -1,6 +1,6 @@
 {
     "name": "pxt-r4e",
-    "description": "",
+    "description": "Move the Robo4Earth robots and let them play melodies",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -21,7 +21,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "5.0.6",
+        "target": "4.1.54",
         "targetId": "microbit"
     },
     "supportedTargets": [

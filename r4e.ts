@@ -1,8 +1,8 @@
 /**
  * Robo4earth makecode extension
- * in progress
- * 
+ * to move the R4E robot and play melodies
  */
+
 //% color="#FFAB19" //% icon="\uf29a"
 //% groups="['Movement','Melody']"
 namespace r4E {
@@ -17,17 +17,10 @@ namespace r4E {
     //% seconds.min=0 seconds.max=9
     //% speed.defl=10
     //% speed.min=0 speed.max=16
-    export function move(speed: number, direction: Richtung, seconds: number) {
-        r4eMotor.setSpeed(speed)
-        if (direction == Richtung.forward) {
-            r4eMotor.driveForward(seconds, speed)
-        } else if (direction == Richtung.backward) {
-            r4eMotor.driveBackward(seconds, speed)
-        } else if (direction == Richtung.left) {
-            r4eMotor.driveLeft(seconds, speed)
-        } else if (direction == Richtung.right) {
-            r4eMotor.driveRight(seconds, speed)
-        }
+    export function move(direction: R4eMotorDirection, seconds: number, speed: number): void {
+        seconds = (seconds < 0) ? 0 : seconds;
+        seconds = (seconds > 9) ? 9 : seconds;
+        r4eMotor.moveInDirection(direction, seconds, speed);
     }
 
     /**
@@ -39,7 +32,7 @@ namespace r4E {
     //% block="move $motor motor $direction with speed $speed"
     //% group="Movement"
     //% speed.min= 0 speed.max=16
-    export function turnMotor(motor: Motor, direction: Dir, speed: number) {
+    export function turnMotor(motor: R4eMotor, direction: R4eTurn, speed: number) :void {
         r4eMotor.motorRun(motor,direction,speed);
     }
 
@@ -49,7 +42,7 @@ namespace r4E {
      */
     //% block="stop motor $motor"
     //% group="Movement"
-    export function stopMotor(motor: Motor) {
+    export function stopMotor(motor: R4eMotor) :void {
         r4eMotor.motorStop(motor);
     }
 
@@ -59,8 +52,8 @@ namespace r4E {
      */
     //% block="play song $melody"
     //% group="Melody"
-    export function playMelody(melody: Melodien) {
-        let song = r4eMelody.getMelody(melody);
+    export function playMelody(melody: R4eMelodies) :void {
+        let song = r4eMelody.melody(melody);
         music.startMelody(song);
     }
 
