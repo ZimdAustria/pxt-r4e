@@ -1,6 +1,7 @@
 {
     "name": "pxt-r4e",
     "description": "Move the Robo4Earth robots and let them play melodies",
+    "icon": "icon/4earth-app-icon.png",
     "dependencies": {
         "core": "*",
         "radio": "*",
