@@ -1,7 +1,7 @@
 
 > Diese Seite bei [https://zimdaustria.github.io/r4e-makecode/](https://zimdaustria.github.io/r4e-makecode/) öffnen
 
-# Robot4Earth for MakeCode
+# R4E Erweiterung für Makecode
 Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen. In den Robotern verwenden wir das Motorboard von [Waveshare](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). Du kannst die Waveshare Erweiterung verwenden wenn du Servomotoren zu deinem Roboter hinzufügen willst.
 Wenn du deine eigene Robot4earth bauen und gestalten willst findest du alle benötigten Materialien auf unserer [robo4earth website](https://www.robo4earth.at/#roboter)
 
