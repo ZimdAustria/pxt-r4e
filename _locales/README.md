@@ -37,7 +37,7 @@ r4E.move(R4eMotorDirection.forward, 2, 10);
 
 ## API blocks
 
-<img src="../pictures/R4E_API_English.png"/><br/>
+<img src="../pictures/R4E_API_English.PNG"/><br/>
 
 #### Metadata (used for search/rendering)
 
