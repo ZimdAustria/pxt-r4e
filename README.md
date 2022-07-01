@@ -1,29 +1,43 @@
-
 > Diese Seite bei [https://zimdaustria.github.io/r4e-makecode/](https://zimdaustria.github.io/r4e-makecode/) öffnen
 
-## Als Erweiterung verwenden
 
-Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
+# Robot4Earth for MakeCode
 
-* öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klicke auf **Neues Projekt**
-* klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/zimdaustria/r4e-makecode** suchen und importieren
+This repository hosts the extension to program the [ZIMD](https://www.zimd.at/) robots with MakeCode. The extension allows you to move them and let them play melodies.
+The robot is utilizing the [waveshare motorboard](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). You can use their extension if you want to add servo motors to the robot.
+If you want to build your own robot you'll find everything you need on our [robo4earth website](https://www.robo4earth.at/#roboter)<br/>
 
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/zimdaustria/r4e-makecode/workflows/MakeCode/badge.svg)
+<img src="pictures/robot1.jpg" style="width:400px;"/><br/>
 
-Um dieses Repository in MakeCode zu bearbeiten.
+## Use as Extension in MakeCode
 
-* öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/zimdaustria/r4e-makecode** ein und klicke auf Importieren
+You can add this repository as an **Extension** in MakeCode.
 
-## Blockvorschau
+* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
+* click on **New Project**
+* click on **Extensions**
+* search for **https://github.com/zimdaustria/r4e-makecode** in the search box
 
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
+## API code example
 
-![Eine gerenderte Ansicht der Blöcke](https://github.com/zimdaustria/r4e-makecode/raw/master/.github/makecode/blocks.png)
+```
+// let robot play fanfare
+r4E.playMelody(R4eMelodies.Fanfare);
+
+// let robot turn on the spot for 1 second
+r4E.turnMotor(R4eMotor.Left, R4eTurn.Backward, 10);
+r4E.turnMotor(R4eMotor.Right, R4eTurn.Forward, 10);
+basic.pause(1000);
+r4E.stopMotor(R4eMotor.Left);
+r4E.stopMotor(R4eMotor.Right);
+
+// let robot move forward for 2 seconds
+r4E.move(R4eMotorDirection.forward, 2, 10);
+```
+
+## API blocks
+
+<img src="pictures/R4E_API_English.png"/><br/>
 
 #### Metadaten (verwendet für Suche, Rendering)
 
