@@ -1,6 +1,5 @@
 {
     "name": "pxt-r4e",
-    "version": "1.0.0",
     "description": "Move the Robo4Earth robots and let them play melodies",
     "dependencies": {
         "core": "*",
