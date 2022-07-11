@@ -6,7 +6,8 @@ enum R4eMelodies {
     HappyBirthday,
     SuperMario,
     StarWars,
-    OverTheRainbow
+    OverTheRainbow,
+    AreYouSleeping
 }
 const fanfare = ["c4:1", "r:1", "g3:1", "g3:1", "a3:2",
     "g3:3", "r:1", "b3:2", "c4:2"];
@@ -50,6 +51,15 @@ const rainbow = [
     "r:2", "a3:4", "f4:4", "e4:2", "c4:1",
     "d4:1", "e4:2", "f4:2", "d4:2", "b3:1",
     "c4:1", "d4:2", "e4:2", "c4:6"];
+const areYouSleeping = [
+    "f4:4", "g4:4", "a4:4", "f4:4",
+    "f4:4", "g4:4", "a4:4", "f4:4",
+    "a4:4", "a#4:4", "c5:8",
+    "a4:4", "a#4:4", "c5:7", "r:1",
+    "c5:2", "d5:2", "c5:2", "a#4:2", "a4:4", "f4:4",
+    "c5:2", "d5:2", "c5:2", "a#4:2", "a4:4", "f4:4",
+    "f4:4", "c4:4", "f4:7", "r:1",
+    "f4:4", "c4:4", "f4:7", "r:1"];
 
 namespace r4eMelody {
     
@@ -71,6 +81,8 @@ namespace r4eMelody {
                 return starWars;
             case R4eMelodies.OverTheRainbow:
                 return rainbow;
+            case R4eMelodies.AreYouSleeping:
+                return areYouSleeping;
             default:
                 return ["c:1"];
         }
