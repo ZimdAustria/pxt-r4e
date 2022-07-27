@@ -5,7 +5,7 @@
 
 //% color="#FFAB19" //% icon="\uf29a"
 //% groups="['Movement','Melody']"
-namespace r4E {
+namespace robo4earth {
     /**
      * robot drives in given direction
      * @param direction choose between forward, backward, left and driveRight
@@ -34,6 +34,17 @@ namespace r4E {
     //% speed.min= 0 speed.max=16
     export function turnMotor(motor: R4eMotor, direction: R4eTurn, speed: number) :void {
         r4eMotor.motorRun(motor,direction,speed);
+    }
+
+    /**
+     * change motor pin settings for different R4eMotorboard
+     * @param board choose the motorboard extension board on your R4e Robo4earth
+     * the default motorboard is the motor extension module by waveshare
+     */
+    //% block="set motorboard extension to $board"
+    //% group="Movement"
+    export function changeMotorboard(board: R4eMotorboards) :void {
+        r4eMotor.changePinSetting(board);
     }
 
     /**
