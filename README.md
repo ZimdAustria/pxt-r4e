@@ -1,5 +1,5 @@
 
-> Diese Seite bei [https://zimdaustria.github.io/r4e-makecode/](https://zimdaustria.github.io/r4e-makecode/) öffnen
+> Diese Seite bei [https://zimdaustria.github.io/pxt-r4e/](https://zimdaustria.github.io/pxt-r4e/) öffnen
 
 # R4E Erweiterung für Makecode
 Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen. In den Robotern verwenden wir das Motorboard von [Waveshare](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). Du kannst die Waveshare Erweiterung verwenden wenn du Servomotoren zu deinem Roboter hinzufügen willst.
