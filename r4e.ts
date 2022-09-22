@@ -3,7 +3,7 @@
  * to move the R4E robot and play melodies
  */
 
-//% color="#FFAB19" //% icon="\uf29a"
+//% color="#FFAB19" //% icon="\uf0ac"
 //% groups="['Movement','Melody']"
 namespace robo4earth {
     /**
@@ -37,9 +37,9 @@ namespace robo4earth {
     }
 
     /**
-     * change motor pin settings for different R4eMotorboard
+     * change motor pin settings for different Motor extension board. 
+     * The default board is the motor extension module by waveshare.
      * @param board choose the motorboard extension board on your R4e Robo4earth
-     * the default motorboard is the motor extension module by waveshare
      */
     //% block="set motorboard extension to $board"
     //% group="Movement"

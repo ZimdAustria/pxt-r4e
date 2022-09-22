@@ -1,12 +1,12 @@
 {
-  "r4E.move|block": "fahre in Richtung $direction für $seconds Sekunden mit Tempo $speed",
-  "r4E.playMelody|block": "spiele Melodie $melody",
-  "r4E.stopMotor|block": "stoppe Motor $motor",
-  "r4E.turnMotor|block": "bewege $motor Motor in Richtung $direction mit Tempo $speed",
-  "r4E|block": "r4E",
-  "{id:category}R4E": "R4E",
+  "Robo4earth.move|block": "fahre in Richtung $direction für $seconds Sekunden mit Tempo $speed",
+  "Robo4earth.playMelody|block": "spiele Melodie $melody",
+  "Robo4earth.stopMotor|block": "stoppe Motor $motor",
+  "Robo4earth.turnMotor|block": "bewege $motor Motor in Richtung $direction mit Tempo $speed",
+  "Robo4earth|block": "robo4earth",
   "{id:category}R4eMelody": "R4eMelody",
   "{id:category}R4eMotor": "R4eMotor",
+  "{id:category}Robo4earth": "Robo4earth",
   "{id:group}Melody": "Melodie",
   "{id:group}Movement": "Bewegung"
 }
