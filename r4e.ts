@@ -3,7 +3,7 @@
  * to move the R4E robot and play melodies
  */
 
-//% color="#FFAB19" //% icon="\uf29a"
+//% color="#FFAB19" //% icon="\uf0ac"
 //% groups="['Movement','Melody']"
 namespace r4E {
     /**
