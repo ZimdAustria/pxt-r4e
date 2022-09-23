@@ -1,0 +1,13 @@
+{
+  "robo4earth.changeMotorboard|block": "verwende alternatives Motorboard $board",
+  "robo4earth.move|block": "fahre in Richtung $direction für $seconds Sekunden mit Tempo $speed",
+  "robo4earth.playMelody|block": "spiele Melodie $melody",
+  "robo4earth.stopMotor|block": "stoppe Motor $motor",
+  "robo4earth.turnMotor|block": "bewege $motor Motor in Richtung $direction mit Tempo $speed",
+  "robo4earth|block": "robo4earth",
+  "{id:category}R4eMelody": "R4eMelodie",
+  "{id:category}R4eMotor": "R4eMotor",
+  "{id:category}Robo4earth": "Robo4earth",
+  "{id:group}Melody": "Melodie",
+  "{id:group}Movement": "Bewegung"
+}
