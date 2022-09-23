@@ -1,4 +1,4 @@
-> open this page at [https://zimdaustria.github.io/r4e-makecode/](https://zimdaustria.github.io/r4e-makecode/)
+> open this page at [https://zimdaustria.github.io/pxt-robo4earth/](https://zimdaustria.github.io/pxt-robo4earth/)
 
 
 # Robot4Earth for MakeCode
@@ -16,7 +16,7 @@ You can add this repository as an **Extension** in MakeCode.
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **New Project**
 * click on **Extensions**
-* search for **https://github.com/zimdaustria/r4e-makecode** in the search box
+* search for **https://github.com/zimdaustria/pxt-robo4earth** in the search box
 
 ## API code example
 
