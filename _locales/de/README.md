@@ -1,11 +1,11 @@
 
-> Diese Seite bei [https://zimdaustria.github.io/r4e-makecode/](https://zimdaustria.github.io/r4e-makecode/) öffnen
+> Diese Seite bei [https://zimdaustria.github.io/pxt-robo4earth/](https://zimdaustria.github.io/pxt-robo4earth/) öffnen
 
-# Robot4Earth for MakeCode
+# Robo4earth Erweiterung für Makecode
 Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen. In den Robotern verwenden wir das Motorboard von [Waveshare](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). Du kannst die Waveshare Erweiterung verwenden wenn du Servomotoren zu deinem Roboter hinzufügen willst.
 Wenn du deine eigene Robot4earth bauen und gestalten willst findest du alle benötigten Materialien auf unserer [robo4earth website](https://www.robo4earth.at/#roboter)
 
-<img src="../../pictures/robot1.jpg" style="width:400px;"/><br/>
+<img src="pictures/robot1.jpg" style="width:400px;"/><br/>
 
 ## Als Erweiterung verwenden
 
@@ -14,15 +14,15 @@ Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
 * öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * klicke auf **Neues Projekt**
 * klicke auf **Erweiterungen** unter dem Zahnrad-Menü
-* nach **https://github.com/zimdaustria/r4e-makecode** suchen und importieren
+* nach **https://github.com/zimdaustria/pxt-robo4earth** suchen und importieren
 
-## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/zimdaustria/r4e-makecode/workflows/MakeCode/badge.svg)
+## Dieses Projekt bearbeiten ![Build Status Abzeichen](https://github.com/zimdaustria/pxt-robo4earth/workflows/MakeCode/badge.svg)
 
 Um dieses Repository in MakeCode zu bearbeiten.
 
 * öffne [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * klicke auf **Importieren** und dann auf **Importiere URL**
-* füge **https://github.com/zimdaustria/r4e-makecode** ein und klicke auf Importieren
+* füge **https://github.com/zimdaustria/pxt-robo4earth** ein und klicke auf Importieren
 
 ## API Code Beispiel
 ```
@@ -52,14 +52,14 @@ r4E.move(R4eMotorDirection.forward, 1, 10)
 ```
 
 ## API Blöcke
-<img src="../../pictures/Robo4EarthAPIGerman.PNG"/><br/>
+<img src="pictures/Robo4EarthAPIGerman.PNG"/><br/>
 
 ## Blockvorschau
 
 Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
 Die Aktualisierung dieses Bildes kann einige Minuten dauern.
 
-![Eine gerenderte Ansicht der Blöcke](https://github.com/zimdaustria/r4e-makecode/raw/master/.github/makecode/blocks.png)
+![Eine gerenderte Ansicht der Blöcke](https://github.com/zimdaustria/pxt-robo4earth/raw/master/.github/makecode/blocks.png)
 
 #### Metadaten (verwendet für Suche, Rendering)
 
