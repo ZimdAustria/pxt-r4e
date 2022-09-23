@@ -1,7 +1,8 @@
 {
-    "name": "Robo4Earth",
-    "version": "1.0.0",
-    "description": "Move the Robo4Earth robots and let them play melodies",
+    "name": "robo4earth",
+    "version": "2.0.0",
+    "description": "Bewege die Robo4earth Roboter und lasse sie Melodien spielen. Move the Robo4earth robots and let them play melodies",
+    "license": "MIT",
     "dependencies": {
         "core": "*",
         "radio": "*",
@@ -15,14 +16,14 @@
         "r4eMelodies.ts",
         "re4Motor.ts",
         "_locales/de/README.md",
-        "_locales/de/pxt-r4e-jsdoc-strings.json",
-        "_locales/de/pxt-r4e-strings.json"
+        "_locales/de/robo4earth-jsdoc-strings.json",
+        "_locales/de/robo4earth-strings.json"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.1.54",
+        "target": "5.0.12",
         "targetId": "microbit"
     },
     "supportedTargets": [

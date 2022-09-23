@@ -1,3 +1,7 @@
+enum R4eMotorboards {
+    keystudio,
+    waveshare
+}
 
 enum R4eMotorDirection {
     forward,
@@ -16,14 +20,27 @@ enum R4eTurn {
 }
 
 namespace r4eMotor {
-
+    let speedSetting = 10;
+    // Set pins for waveshare motorboard on default
     let PWMA = AnalogPin.P8;
     let AIN1 = DigitalPin.P13;
     let AIN2 = DigitalPin.P12;
     let PWMB = AnalogPin.P16;
     let BIN1 = DigitalPin.P14;
     let BIN2 = DigitalPin.P15;
-    let speedSetting = 10;
+
+    export function changePinSetting(motorboard: R4eMotorboards){
+        if (motorboard == R4eMotorboards.keystudio) {
+            PWMA = AnalogPin.P1;
+            AIN1 = DigitalPin.P13;
+            AIN2 = DigitalPin.P12;
+            PWMB = AnalogPin.P2;
+            BIN1 = DigitalPin.P16;
+            BIN2 = DigitalPin.P15;
+            // enable pin
+            pins.digitalWritePin(DigitalPin.P14,1);
+        }
+    }
 
     export function motorStop(m: R4eMotor): void {
         if (m == R4eMotor.Right)
