@@ -1,6 +1,6 @@
 {
     "name": "robo4earth",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "description": "Bewege die Robo4earth Roboter und lasse sie Melodien spielen. Move the Robo4earth robots and let them play melodies",
     "license": "MIT",
     "dependencies": {

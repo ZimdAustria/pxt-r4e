@@ -1,5 +1,5 @@
 {
-  "robo4earth.changeMotorboard|block": "verwende alternatives Motor board $board",
+  "robo4earth.changeMotorboard|block": "verwende alternatives Motorboard $board",
   "robo4earth.driveBackward|block": "fahre rückwärts mit Tempo $speed",
   "robo4earth.driveForward|block": "fahre vorwärts mit Tempo $speed",
   "robo4earth.drive|block": "fahre in Richtung $direction mit Tempo $speed für $seconds Sekunden",
