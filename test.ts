@@ -1,21 +1,24 @@
-/*
-function driveRightFor1Second () {
-    // turn single wheels with different tempos
-    robo4earth.turnMotor(R4eMotor.Left, R4eTurn.Forward, 10)
-    robo4earth.turnMotor(R4eMotor.Right, R4eTurn.Forward, 5)
-    // pause 1000(ms) to turn the wheels for 1 second
-    basic.pause(1000)
-    // stop single wheels
-    robo4earth.stopMotor(R4eMotor.Left)
-    robo4earth.stopMotor(R4eMotor.Right)
-}
-// the robot drives in the given direction 
-// for 1 second wit tempo 10
-robo4earth.move(R4eMotorDirection.forward, 1, 10)
+/**
+ * Robo4earth dance
+ */
 
-// plays melody fanfare
+basic.showIcon(IconNames.Happy)
+music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
+basic.pause(1000)
+basic.showIcon(IconNames.StickFigure)
+robo4earth.drive(R4eMotorDirection.forward, 10, 0.4)
+robo4earth.drive(R4eMotorDirection.backward, 10, 0.4)
+basic.showIcon(IconNames.SmallHeart)
+music.playSoundEffect(music.builtinSoundEffect(soundExpression.hello), SoundExpressionPlayMode.InBackground)
+robo4earth.turnLeft(10)
+basic.pause(1000)
+robo4earth.stopAll()
+basic.showIcon(IconNames.Heart)
+music.playSoundEffect(music.builtinSoundEffect(soundExpression.giggle), SoundExpressionPlayMode.InBackground)
+robo4earth.turnRight(10)
+basic.pause(1000)
+robo4earth.stopAll()
+basic.showIcon(IconNames.Yes)
 robo4earth.playMelody(R4eMelodies.Fanfare)
-
-// call the function
-driveRightFor1Second()
-*/
+basic.pause(1000)
+basic.clearScreen()
