@@ -4,7 +4,6 @@
 # Robot4Earth for MakeCode
 
 This repository hosts the extension to program the [ZIMD](https://www.zimd.at/) robots with MakeCode. The extension allows you to move them and let them play melodies.
-The robot is utilizing the [waveshare motorboard](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). You can use their extension if you want to add servo motors to the robot.
 If you want to build your own robot you'll find everything you need on our [robo4earth website](https://www.robo4earth.at/#roboter)<br/>
 
 <img src="../pictures/robot1.jpg" style="width:400px;"/><br/>
@@ -34,7 +33,6 @@ basic.pause(1000)
 robo4earth.stopMovement()
 
 ```
-<!-- <img src="pictures/Robo4EarthAPIGerman.PNG"/><br/> -->
 
 #### Metadata (used for search/rendering)
 

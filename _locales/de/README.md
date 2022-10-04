@@ -2,7 +2,7 @@
 > Diese Seite bei [https://zimdaustria.github.io/pxt-robo4earth/](https://zimdaustria.github.io/pxt-robo4earth/) öffnen
 
 # Robo4earth Erweiterung für Makecode
-Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen. In den Robotern verwenden wir das Motorboard von [Waveshare](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). Du kannst die Waveshare Erweiterung verwenden wenn du Servomotoren zu deinem Roboter hinzufügen willst.
+Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen.
 Wenn du deine eigene Robot4earth bauen und gestalten willst findest du alle benötigten Materialien auf unserer [robo4earth website](https://www.robo4earth.at/#roboter)
 
 <img src="../../pictures/robot1.jpg" style="width:400px;"/><br/>
@@ -40,7 +40,6 @@ basic.pause(1000)
 robo4earth.stopMovement()
 
 ```
-<!-- <img src="pictures/Robo4EarthAPIGerman.PNG"/><br/> -->
 
 #### Metadaten (verwendet für Suche, Rendering)
 
