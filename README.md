@@ -24,43 +24,22 @@ Um dieses Repository in MakeCode zu bearbeiten.
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * füge **https://github.com/zimdaustria/pxt-robo4earth** ein und klicke auf Importieren
 
-## API Code Beispiel
+##  Verwendungsbeispiel
+```blocks
+
+// die Robo4earth spielt einen Tusch
+robo4earth.playMelody(R4eMelodies.Fanfare)
+
+// Die Robo4earth fährt vorwärts für 2 Sekunden mit Tempo 10
+robo4earth.drive(R4eMotorDirection.forward, 2, 10);
+
+// Die Robo4earth fährt Rückwärts bis die Motoren gestoppt werden
+robo4earth.driveBackward(10)
+basic.pause(1000)
+// stop motors
+robo4earth.stopMovement()
+
 ```
-function driveRightFor1Second () {
-    // drehe die Räder einzeln 
-    // mit unterschiedlicher Geschwindigkeit
-    r4E.turnMotor(R4eMotor.Left, R4eTurn.Forward, 10)
-    r4E.turnMotor(R4eMotor.Right, R4eTurn.Forward, 5)
-
-    // pausiere 1000(ms) 
-    // damit sich die Räder 1 Sekunde lang drehen
-    basic.pause(1000)
-
-    // stoppe die Räder
-    r4E.stopMotor(R4eMotor.Left)
-    r4E.stopMotor(R4eMotor.Right)
-}
-// Funktionsaufruf der oben erstellten Funktion
-driveRightFor1Second()
-
-// spielt Melodie Fanfare ab
-r4E.playMelody(R4eMelodies.Fanfare)
-
-// der Roboter fährt in die angegebene Richtung
-// für 1 Sekunde mit Tempo 10
-r4E.move(R4eMotorDirection.forward, 1, 10)
-```
-
-## API Blöcke
-<img src="pictures/Robo4EarthAPIGerman.PNG"/><br/>
-
-## Blockvorschau
-
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
-
-![Eine gerenderte Ansicht der Blöcke](https://github.com/zimdaustria/pxt-robo4earth/raw/master/.github/makecode/blocks.png)
-
 #### Metadaten (verwendet für Suche, Rendering)
 
 * for PXT/microbit

@@ -5,7 +5,7 @@
 Dieses Repository enthält die Makecode Erweiterung für die [ZIMD]() Roboter. Damit kannst du die Roboter bewegen und Musik abspielen. In den Robotern verwenden wir das Motorboard von [Waveshare](https://www.waveshare.com/wiki/Motor_Driver_for_micro:bit). Du kannst die Waveshare Erweiterung verwenden wenn du Servomotoren zu deinem Roboter hinzufügen willst.
 Wenn du deine eigene Robot4earth bauen und gestalten willst findest du alle benötigten Materialien auf unserer [robo4earth website](https://www.robo4earth.at/#roboter)
 
-<img src="pictures/robot1.jpg" style="width:400px;"/><br/>
+<img src="../../pictures/robot1.jpg" style="width:400px;"/><br/>
 
 ## Als Erweiterung verwenden
 
@@ -24,32 +24,16 @@ Um dieses Repository in MakeCode zu bearbeiten.
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * füge **https://github.com/zimdaustria/pxt-robo4earth** ein und klicke auf Importieren
 
-##  Beispiele für die Verwendung
-### Code Beispiel in JavaScript
-```
-// let robot play melody fanfare
-robo4earth.playMelody(R4eMelodies.Fanfare)
-
-// robot moves forward for 2 seconds with speed 10
-robo4earth.drive(R4eMotorDirection.forward, 2, 10);
-
-// robot moves backward until motors are stopped
-robo4earth.driveBackward(10)
-basic.pause(1000)
-// stop motors
-robo4earth.stopMovement()
-```
-
-### Code Beispiel mit Blöcken
+##  Verwendungsbeispiel
 ```blocks
 
-// let robot play melody fanfare
+// die Robo4earth spielt einen Tusch
 robo4earth.playMelody(R4eMelodies.Fanfare)
 
-// robot moves forward for 2 seconds with speed 10
+// Die Robo4earth fährt vorwärts für 2 Sekunden mit Tempo 10
 robo4earth.drive(R4eMotorDirection.forward, 2, 10);
 
-// robot moves backward until motors are stopped
+// Die Robo4earth fährt Rückwärts bis die Motoren gestoppt werden
 robo4earth.driveBackward(10)
 basic.pause(1000)
 // stop motors
