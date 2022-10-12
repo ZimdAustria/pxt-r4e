@@ -30,7 +30,7 @@ robo4earth.drive(R4eMotorDirection.forward, 2, 10);
 robo4earth.driveBackward(10)
 basic.pause(1000)
 // stop motors
-robo4earth.stopMovement()
+robo4earth.stopAll()
 
 ```
 
